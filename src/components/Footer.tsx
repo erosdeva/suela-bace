@@ -23,45 +23,45 @@ export default function Footer() {
     {
       title: 'POWERFUL STORIES',
       description: 'Emotionally rich novels that uncover the truth behind the masks.',
-      icon: <Eye className="w-6 h-6 text-red-500" />
+      icon: <Eye className="w-6 h-6 text-red-600" />
     },
     {
       title: 'HUMAN CONNECTION',
       description: 'Themes of love, trauma, forgiveness, and the strength to heal.',
-      icon: <Heart className="w-6 h-6 text-red-500" />
+      icon: <Heart className="w-6 h-6 text-red-600" />
     },
     {
       title: 'CULTURAL VOICE',
       description: 'Proudly sharing Albanian heritage through fictional storytelling.',
-      icon: <Feather className="w-6 h-6 text-red-500" />
+      icon: <Feather className="w-6 h-6 text-red-600" />
     },
     {
       title: 'SPEAKING & EVENTS',
       description: 'Book readings, interviews, and events that connect and inspire.',
-      icon: <Users className="w-6 h-6 text-red-500" />
+      icon: <Users className="w-6 h-6 text-red-600" />
     }
   ];
 
   return (
-    <footer className="bg-black text-neutral-400 border-t border-neutral-900 group" id="footer">
+    <footer className="bg-white text-neutral-600 border-t border-neutral-200 group" id="footer">
 
       {/* 4 Pillars Grid Section (Precisely matching the sub-footer in web_page_spread.png) */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 border-b border-neutral-900">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 border-b border-neutral-200">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {pillars.map((pillar, i) => (
             <div
               key={pillar.title}
-              className="flex flex-col items-center md:items-start text-center md:text-left space-y-4 p-5 rounded-2xl hover:bg-neutral-950/40 border border-transparent hover:border-neutral-900 transition-all duration-300"
+              className="flex flex-col items-center md:items-start text-center md:text-left space-y-4 p-5 rounded-2xl hover:bg-neutral-50 border border-transparent hover:border-neutral-200 transition-all duration-300"
               id={`footer-pillar-${i}`}
             >
-              <div className="p-3 bg-neutral-900/45 rounded-xl text-red-500 border border-neutral-800/80">
+              <div className="p-3 bg-red-50 rounded-xl text-red-600 border border-red-100">
                 {pillar.icon}
               </div>
               <div>
-                <h4 className="text-sm font-serif font-bold text-white tracking-wider uppercase mb-1.5">
+                <h4 className="text-sm font-serif font-bold text-neutral-900 tracking-wider uppercase mb-1.5">
                   {pillar.title}
                 </h4>
-                <p className="text-xs text-neutral-400 leading-relaxed font-light">
+                <p className="text-xs text-neutral-600 leading-relaxed font-light">
                   {pillar.description}
                 </p>
               </div>
@@ -77,8 +77,8 @@ export default function Footer() {
 
         {/* Brand Copyright */}
         <div className="flex items-center gap-2 text-center md:text-left text-[11px] font-mono tracking-widest uppercase">
-          <span className="text-white font-bold">Deva AI Solutions © {new Date().getFullYear()}</span>
-          <span className="text-neutral-700">|</span>
+          <span className="text-neutral-900 font-bold">Deva AI Solutions © {new Date().getFullYear()}</span>
+          <span className="text-neutral-300">|</span>
           <span className="text-neutral-500 font-light">All Rights Reserved</span>
         </div>
 

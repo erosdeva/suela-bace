@@ -36,7 +36,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-black text-neutral-300 antialiased selection:bg-red-700 selection:text-white" id="root-viewport">
+    <div className="relative min-h-screen bg-white text-neutral-700 antialiased selection:bg-red-700 selection:text-white" id="root-viewport">
       {/* Dynamic Floating Navigation */}
       <Navbar />
 

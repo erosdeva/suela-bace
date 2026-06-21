@@ -64,19 +64,19 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled
-        ? 'bg-black/95 border-b border-neutral-900/80 backdrop-blur-md shadow-lg py-3'
-        : 'bg-gradient-to-b from-black/85 to-transparent py-5/5'
+        ? 'bg-white/95 border-b border-neutral-200 backdrop-blur-md shadow-sm py-3'
+        : 'bg-gradient-to-b from-white/90 to-transparent py-5/5'
         }`}
       id="top-navbar"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Author Brand Name & Emblem */}
         <div className="flex items-center gap-3 cursor-pointer" onClick={() => handleNavClick('home')} id="navbar-brand">
-          <div className="w-8 h-8 rounded-full bg-red-950/40 border border-red-600/60 flex items-center justify-center text-red-500 font-serif font-bold text-sm shadow-md shadow-red-950/20">
+          <div className="w-8 h-8 rounded-full bg-red-50 border border-red-300 flex items-center justify-center text-red-600 font-serif font-bold text-sm shadow-sm">
             ❦
           </div>
           <div>
-            <span className="font-serif text-lg md:text-xl font-bold tracking-widest text-white block uppercase">
+            <span className="font-serif text-lg md:text-xl font-bold tracking-widest text-neutral-900 block uppercase">
               {AUTHOR_NAME}
             </span>
             <span className="text-[8px] md:text-[9px] text-red-500 font-mono tracking-widest uppercase block -mt-1 font-semibold">
@@ -86,12 +86,12 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Navigation Items */}
-        <div className="hidden lg:flex items-center gap-8 text-xs font-mono tracking-widest uppercase text-neutral-400">
+        <div className="hidden lg:flex items-center gap-8 text-xs font-mono tracking-widest uppercase text-neutral-500">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => handleNavClick(item.id)}
-              className={`hover:text-white transition-all cursor-pointer relative pb-1 block font-semibold ${activeSection === item.id ? 'text-white font-bold' : ''
+              className={`hover:text-neutral-900 transition-all cursor-pointer relative pb-1 block font-semibold ${activeSection === item.id ? 'text-neutral-900 font-bold' : ''
                 }`}
               id={`nav-item-btn-${item.id}`}
             >
@@ -110,7 +110,7 @@ export default function Navbar() {
         {/* Mobile menu triggers */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden p-2 rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-900 transition-colors"
+          className="lg:hidden p-2 rounded-lg text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 transition-colors"
           aria-label="Toggle menu"
           id="mobile-nav-toggle"
         >
@@ -120,19 +120,19 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {isOpen && (
-        <div className="lg:hidden bg-black/98 border-b border-neutral-900 px-6 py-6 space-y-4 absolute top-full left-0 right-0 z-30 flex flex-col text-sm font-mono tracking-widest uppercase" id="mobile-menu-drawer">
+        <div className="lg:hidden bg-white border-b border-neutral-200 px-6 py-6 space-y-4 absolute top-full left-0 right-0 z-30 flex flex-col text-sm font-mono tracking-widest uppercase shadow-lg" id="mobile-menu-drawer">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => handleNavClick(item.id)}
-              className={`text-left py-2 hover:text-white transition-all ${activeSection === item.id ? 'text-white pl-2 border-l border-red-500' : 'text-neutral-400'
+              className={`text-left py-2 hover:text-neutral-900 transition-all ${activeSection === item.id ? 'text-neutral-900 pl-2 border-l border-red-500' : 'text-neutral-500'
                 }`}
               id={`mobile-nav-item-${item.id}`}
             >
               {item.label}
             </button>
           ))}
-          <div className="flex gap-4 pt-4 border-t border-neutral-900 text-neutral-400">
+          <div className="flex gap-4 pt-4 border-t border-neutral-200 text-neutral-500">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
               <Facebook className="w-4 h-4" />
             </a>

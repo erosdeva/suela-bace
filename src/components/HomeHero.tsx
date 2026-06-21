@@ -13,11 +13,11 @@ export default function HomeHero({ onOpenBook, onScrollToSection }: HomeHeroProp
   const stormsOfLifeBook = BOOKS.find((b) => b.id === 'storms-of-life')!;
 
   return (
-    <section className="relative min-h-screen bg-black pt-28 pb-20 overflow-hidden flex items-center justify-center font-sans select-none" id="home">
-      {/* Absolute Smoky Crimson/Velvet Background Shaders */}
-      <div className="absolute inset-0 z-0 bg-radial-[circle_at_30%_50%] from-red-950/20 via-black to-black opacity-80" />
-      <div className="absolute top-[20%] right-[-10%] w-[500px] h-[500px] bg-red-900/10 rounded-full blur-[140px] pointer-events-none z-0" />
-      <div className="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-red-950/15 rounded-full blur-[120px] pointer-events-none z-0" />
+    <section className="relative min-h-screen bg-white pt-28 pb-20 overflow-hidden flex items-center justify-center font-sans select-none" id="home">
+      {/* Subtle warm accent glows */}
+      <div className="absolute inset-0 z-0 bg-radial-[circle_at_30%_50%] from-red-50 via-white to-white opacity-90" />
+      <div className="absolute top-[20%] right-[-10%] w-[500px] h-[500px] bg-red-100/40 rounded-full blur-[140px] pointer-events-none z-0" />
+      <div className="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-red-50/60 rounded-full blur-[120px] pointer-events-none z-0" />
 
       {/* Main Grid: Adapts precisely from web_page_spread.png */}
       <div className="relative w-full max-w-7xl mx-auto px-6 md:px-12 z-10 grid grid-cols-1 xl:grid-cols-12 gap-8 items-center">
@@ -26,9 +26,9 @@ export default function HomeHero({ onOpenBook, onScrollToSection }: HomeHeroProp
         <div className="xl:col-span-4 flex flex-col items-center xl:items-start text-center xl:text-left space-y-6">
           <div className="relative group">
             {/* Red Light Smoke Glow behind Author */}
-            <div className="absolute -inset-2 bg-gradient-to-tr from-red-800 to-red-900/40 rounded-2xl blur-lg opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
+            <div className="absolute -inset-2 bg-gradient-to-tr from-red-200/60 to-red-100/40 rounded-2xl blur-lg opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
 
-            <div className="relative w-full max-w-[280px] sm:max-w-[320px] xl:max-w-full aspect-[3/4] overflow-hidden rounded-2xl border border-neutral-800/80 bg-neutral-900/40 shadow-2xl">
+            <div className="relative w-full max-w-[280px] sm:max-w-[320px] xl:max-w-full aspect-[3/4] overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-50 shadow-xl">
               <img
                 src={BIOGRAPHY.portraitImage}
                 alt="Suela Baçe"
@@ -36,21 +36,21 @@ export default function HomeHero({ onOpenBook, onScrollToSection }: HomeHeroProp
                 className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-102"
               />
               {/* Luxury dark red vignette overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-45" />
+              <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/20 via-transparent to-transparent opacity-30" />
             </div>
           </div>
 
           <div className="space-y-4 max-w-sm">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-red-950/40 border border-red-900/50 rounded-full text-[10px] font-mono tracking-widest uppercase text-red-400">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-red-50 border border-red-200 rounded-full text-[10px] font-mono tracking-widest uppercase text-red-600">
               <Sparkles className="w-3 h-3 text-red-500" /> Albanian Storyteller
             </div>
 
-            <h1 className="text-3xl font-serif font-bold text-white tracking-tight leading-snug">
+            <h1 className="text-3xl font-serif font-bold text-neutral-900 tracking-tight leading-snug">
               Stories that Inspire.<br />
-              <span className="text-red-500 italic font-serif">Lessons</span> that Last.
+              <span className="text-red-600 italic font-serif">Lessons</span> that Last.
             </h1>
 
-            <p className="text-sm text-neutral-400 font-light leading-relaxed">
+            <p className="text-sm text-neutral-600 font-light leading-relaxed">
               {BIOGRAPHY.shortBio}
             </p>
 
@@ -78,7 +78,7 @@ export default function HomeHero({ onOpenBook, onScrollToSection }: HomeHeroProp
             >
               <div
                 onClick={() => onOpenBook(faceOfLoveBook)}
-                className="relative cursor-pointer group shadow-2xl rounded-xl overflow-hidden aspect-[3/4] border border-neutral-800 bg-neutral-900"
+                className="relative cursor-pointer group shadow-xl rounded-xl overflow-hidden aspect-[3/4] border border-neutral-200 bg-neutral-50"
               >
                 <img
                   src={faceOfLoveBook.coverImage}
@@ -86,15 +86,15 @@ export default function HomeHero({ onOpenBook, onScrollToSection }: HomeHeroProp
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
-                  <span className="text-[10px] tracking-widest font-mono text-red-400 uppercase border border-red-900/60 p-2 rounded bg-black/80 flex items-center gap-1">
+                <div className="absolute inset-0 bg-neutral-900/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                  <span className="text-[10px] tracking-widest font-mono text-red-100 uppercase border border-red-300/60 p-2 rounded bg-neutral-900/80 flex items-center gap-1">
                     <BookOpen className="w-3.5 h-3.5" /> Read Excerpt
                   </span>
                 </div>
               </div>
 
               <div className="text-center space-y-2">
-                <h3 className="text-sm font-serif font-bold text-white uppercase tracking-wide">
+                <h3 className="text-sm font-serif font-bold text-neutral-900 uppercase tracking-wide">
                   {faceOfLoveBook.title}
                 </h3>
                 <p className="text-[10px] text-neutral-500 font-serif leading-snug px-1 max-w-[170px] h-[32px] overflow-hidden text-ellipsis line-clamp-2">
@@ -112,7 +112,7 @@ export default function HomeHero({ onOpenBook, onScrollToSection }: HomeHeroProp
                   </a>
                   <button
                     onClick={() => onOpenBook(faceOfLoveBook)}
-                    className="py-1 px-3 border border-neutral-800 hover:border-neutral-700 hover:text-white text-neutral-400 rounded transition-colors"
+                    className="py-1 px-3 border border-neutral-300 hover:border-neutral-400 hover:text-neutral-900 text-neutral-600 rounded transition-colors"
                     id="hero-face-learn-btn"
                   >
                     Learn More
@@ -129,7 +129,7 @@ export default function HomeHero({ onOpenBook, onScrollToSection }: HomeHeroProp
             >
               <div
                 onClick={() => onOpenBook(stormsOfLifeBook)}
-                className="relative cursor-pointer group shadow-2xl rounded-xl overflow-hidden aspect-[3/4] border border-neutral-800 bg-neutral-900"
+                className="relative cursor-pointer group shadow-xl rounded-xl overflow-hidden aspect-[3/4] border border-neutral-200 bg-neutral-50"
               >
                 <img
                   src={stormsOfLifeBook.coverImage}
@@ -137,15 +137,15 @@ export default function HomeHero({ onOpenBook, onScrollToSection }: HomeHeroProp
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
-                  <span className="text-[10px] tracking-widest font-mono text-red-400 uppercase border border-red-900/60 p-2 rounded bg-black/80 flex items-center gap-1">
+                <div className="absolute inset-0 bg-neutral-900/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                  <span className="text-[10px] tracking-widest font-mono text-red-100 uppercase border border-red-300/60 p-2 rounded bg-neutral-900/80 flex items-center gap-1">
                     <BookOpen className="w-3.5 h-3.5" /> Read Excerpt
                   </span>
                 </div>
               </div>
 
               <div className="text-center space-y-2">
-                <h3 className="text-sm font-serif font-bold text-white uppercase tracking-wide">
+                <h3 className="text-sm font-serif font-bold text-neutral-900 uppercase tracking-wide">
                   {stormsOfLifeBook.title}
                 </h3>
                 <p className="text-[10px] text-neutral-500 font-serif leading-snug px-1 max-w-[170px] h-[32px] overflow-hidden text-ellipsis line-clamp-2">
@@ -154,7 +154,7 @@ export default function HomeHero({ onOpenBook, onScrollToSection }: HomeHeroProp
                 <div className="flex flex-col gap-2 pt-1 font-mono text-[9px] tracking-widest uppercase">
                   <button
                     onClick={() => onOpenBook(stormsOfLifeBook)}
-                    className="py-1 px-3 border border-neutral-800 hover:border-neutral-700 hover:text-white text-neutral-400 rounded transition-colors"
+                    className="py-1 px-3 border border-neutral-300 hover:border-neutral-400 hover:text-neutral-900 text-neutral-600 rounded transition-colors"
                     id="hero-storms-learn-btn"
                   >
                     Learn More
@@ -168,9 +168,9 @@ export default function HomeHero({ onOpenBook, onScrollToSection }: HomeHeroProp
         {/* Right Aspect: Proverb, Cards & CTA (Col Span: 3) */}
         <div className="xl:col-span-3 flex flex-col justify-center space-y-8">
           {/* Albanian Proverb Frame (Highlighted precisely in web_page_spread) */}
-          <div className="p-6 bg-neutral-950/40 rounded-xl border border-neutral-900 relative">
-            <Quote className="w-5 h-5 text-red-500 absolute -top-2.5 left-6 bg-black px-1" />
-            <p className="text-neutral-300 font-serif italic text-sm md:text-base leading-relaxed text-center xl:text-left">
+          <div className="p-6 bg-neutral-50 rounded-xl border border-neutral-200 relative">
+            <Quote className="w-5 h-5 text-red-500 absolute -top-2.5 left-6 bg-white px-1" />
+            <p className="text-neutral-700 font-serif italic text-sm md:text-base leading-relaxed text-center xl:text-left">
               “Today's day is history, tomorrow's day is a mystery.”
             </p>
             <span className="text-[9px] font-mono tracking-widest text-red-500 uppercase mt-4 block text-center xl:text-right font-semibold">
@@ -179,11 +179,11 @@ export default function HomeHero({ onOpenBook, onScrollToSection }: HomeHeroProp
           </div>
 
           {/* Core Sidebar Highlight Panel */}
-          <div className="p-6 bg-gradient-to-br from-neutral-950 to-neutral-950 border border-neutral-800/80 rounded-2xl relative shadow-xl space-y-4">
-            <h3 className="text-sm font-serif font-bold text-white uppercase tracking-wider text-center xl:text-left">
+          <div className="p-6 bg-gradient-to-br from-neutral-50 to-white border border-neutral-200 rounded-2xl relative shadow-md space-y-4">
+            <h3 className="text-sm font-serif font-bold text-neutral-900 uppercase tracking-wider text-center xl:text-left">
               Books That Speak to the Heart
             </h3>
-            <p className="text-xs text-neutral-400 leading-relaxed text-center xl:text-left font-light">
+            <p className="text-xs text-neutral-600 leading-relaxed text-center xl:text-left font-light">
               Discover stories of emotional depth and cultural voices that will stay with you long after the final page is closed.
             </p>
             <button
