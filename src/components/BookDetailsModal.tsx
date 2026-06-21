@@ -80,15 +80,7 @@ export default function BookDetailsModal({ book, onClose }: BookDetailsModalProp
                   <span>Purchase Book</span>
                   <ExternalLink className="w-4 h-4" />
                 </a>
-              ) : (
-                <button
-                  onClick={() => alert("Storms of Life is currently available for preorder or review copy access! Please subscribe or contact the author to stay updated.")}
-                  className="w-full py-3 px-4 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-xs tracking-wider uppercase rounded-lg font-mono transition-colors"
-                  id={`preorder-btn-${book.id}`}
-                >
-                  Request Review Copy
-                </button>
-              )}
+              ) : null}
             </div>
           </div>
         </div>
