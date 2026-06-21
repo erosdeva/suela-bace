@@ -6,7 +6,7 @@ export default function AboutSection() {
   return (
     <section className="py-24 px-6 md:px-12 bg-[#050505] border-t border-neutral-900" id="about">
       <div className="max-w-6xl mx-auto space-y-16">
-        
+
         {/* Section title */}
         <div className="text-center space-y-3">
           <span className="text-xs tracking-[0.3em] font-mono uppercase text-red-500 font-bold">The creative voice</span>
@@ -24,7 +24,7 @@ export default function AboutSection() {
               <h3 className="text-lg font-serif font-bold text-white mb-2">
                 Core Themes & Philosophy
               </h3>
-              
+
               <div className="space-y-4">
                 <div className="flex gap-4 items-start">
                   <div className="p-2.5 bg-neutral-900 rounded-xl text-red-500 h-10 w-10 flex items-center justify-center border border-neutral-800">
@@ -81,7 +81,7 @@ export default function AboutSection() {
             <h3 className="text-xl md:text-2xl font-serif font-bold text-white tracking-wide">
               The Journey of Suela Baçe
             </h3>
-            
+
             <div className="space-y-4 text-neutral-300 font-serif leading-relaxed text-sm md:text-base">
               {BIOGRAPHY.longBio.split('\n\n').map((para, i) => (
                 <p key={i} className="text-neutral-200">
@@ -91,10 +91,6 @@ export default function AboutSection() {
             </div>
 
             <div className="pt-6 border-t border-neutral-900 flex flex-wrap gap-6 items-center text-neutral-400 font-mono text-xs">
-              <div className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-red-500" />
-                <span>Award-winning Debut Author</span>
-              </div>
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-red-500" />
                 <span>Proud Albanian Heritage</span>

@@ -135,17 +135,6 @@ export default function BookDetailsModal({ book, onClose }: BookDetailsModalProp
                 {book.longDescription}
               </p>
             </div>
-
-            {/* Excerpt Section */}
-            <div className="mt-8 pt-6 border-t border-neutral-900">
-              <h4 className="text-xs uppercase tracking-widest font-mono text-red-400 flex items-center gap-2 mb-4">
-                <BookOpen className="w-4 h-4" /> Selected Excerpt
-              </h4>
-              <div className="bg-neutral-950 p-5 rounded-lg border border-neutral-900 overflow-y-auto max-h-[250px] font-serif text-sm italic text-neutral-300 leading-relaxed whitespace-pre-line relative shadow-inner">
-                <div className="absolute top-0 right-0 w-8 h-8 pointer-events-none bg-gradient-to-bl from-neutral-900/10 to-transparent" />
-                {book.excerpt}
-              </div>
-            </div>
           </div>
 
           <div className="mt-8 pt-4 border-t border-neutral-900 text-right">
