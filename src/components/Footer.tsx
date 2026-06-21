@@ -77,7 +77,7 @@ export default function Footer() {
 
         {/* Brand Copyright */}
         <div className="flex items-center gap-2 text-center md:text-left text-[11px] font-mono tracking-widest uppercase">
-          <span className="text-white font-bold">{AUTHOR_NAME} Portfolio © {new Date().getFullYear()}</span>
+          <span className="text-white font-bold">Deva AI Solutions © {new Date().getFullYear()}</span>
           <span className="text-neutral-700">|</span>
           <span className="text-neutral-500 font-light">All Rights Reserved</span>
         </div>

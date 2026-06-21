@@ -96,26 +96,6 @@ export default function BooksSection({ onOpenBook }: BooksSectionProps) {
                     >
                       <BookOpen className="w-3.5 h-3.5" /> Excerpt
                     </button>
-
-                    {book.purchaseUrl ? (
-                      <a
-                        href={book.purchaseUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="py-2.5 px-4 bg-red-700 hover:bg-red-600 text-white rounded-lg text-center transition-colors font-semibold flex items-center justify-center gap-1.5 shadow-md shadow-red-900/15"
-                        id={`book-section-buy-${book.id}`}
-                      >
-                        <ShoppingBag className="w-3.5 h-3.5 text-red-200" /> Purchase
-                      </a>
-                    ) : (
-                      <button
-                        onClick={() => alert("Storms of Life is currently available for preorder or review copy access! Please subscribe or contact the author to stay updated.")}
-                        className="py-2.5 px-4 bg-neutral-800 hover:bg-neutral-700 text-neutral-300 rounded-lg text-center transition-colors font-semibold flex items-center justify-center"
-                        id={`book-section-preorder-${book.id}`}
-                      >
-                        Preorder
-                      </button>
-                    )}
                   </div>
                 </div>
               </div>
