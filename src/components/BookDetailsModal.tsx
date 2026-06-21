@@ -10,6 +10,10 @@ interface BookDetailsModalProps {
 export default function BookDetailsModal({ book, onClose }: BookDetailsModalProps) {
   if (!book) return null;
 
+  const handlePreorder = () => {
+    alert("Storms of Life is currently available for preorder or review copy access! Please subscribe or contact the author to stay updated.");
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
       {/* Background Click to Close */}
@@ -82,7 +86,7 @@ export default function BookDetailsModal({ book, onClose }: BookDetailsModalProp
                 </a>
               ) : (
                 <button
-                  onClick={() => alert("Storms of Life is currently available for preorder or review copy access! Please subscribe or contact the author to stay updated.")}
+                  onClick={handlePreorder}
                   className="w-full py-3 px-4 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-xs tracking-wider uppercase rounded-lg font-mono transition-colors"
                   id={`preorder-btn-${book.id}`}
                 >

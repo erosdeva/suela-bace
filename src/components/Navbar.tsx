@@ -17,7 +17,7 @@ export default function Navbar() {
       }
 
       // Simple scroll spy logic
-      const sections = ['home', 'about', 'books', 'reviews', 'events', 'blog', 'contact'];
+      const sections = ['home', 'about', 'books'];
       const scrollPosition = window.scrollY + 120;
 
       for (const section of sections) {
@@ -59,19 +59,14 @@ export default function Navbar() {
     { label: 'Home', id: 'home' },
     { label: 'About the Author', id: 'about' },
     { label: 'Books', id: 'books' },
-    { label: 'Reviews', id: 'reviews' },
-    { label: 'Events', id: 'events' },
-    { label: 'Blog', id: 'blog' },
-    { label: 'Contact', id: 'contact' }
   ];
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled
-          ? 'bg-black/95 border-b border-neutral-900/80 backdrop-blur-md shadow-lg py-3'
-          : 'bg-gradient-to-b from-black/85 to-transparent py-5/5'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled
+        ? 'bg-black/95 border-b border-neutral-900/80 backdrop-blur-md shadow-lg py-3'
+        : 'bg-gradient-to-b from-black/85 to-transparent py-5/5'
+        }`}
       id="top-navbar"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
@@ -96,9 +91,8 @@ export default function Navbar() {
             <button
               key={item.id}
               onClick={() => handleNavClick(item.id)}
-              className={`hover:text-white transition-all cursor-pointer relative pb-1 block font-semibold ${
-                activeSection === item.id ? 'text-white font-bold' : ''
-              }`}
+              className={`hover:text-white transition-all cursor-pointer relative pb-1 block font-semibold ${activeSection === item.id ? 'text-white font-bold' : ''
+                }`}
               id={`nav-item-btn-${item.id}`}
             >
               {item.label}
@@ -111,33 +105,6 @@ export default function Navbar() {
 
         {/* Social Badges Links */}
         <div className="hidden xl:flex items-center gap-4 text-neutral-400">
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-red-500 transition-colors"
-            aria-label="Facebook Profile"
-          >
-            <Facebook className="w-4 h-4" />
-          </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-red-500 transition-colors"
-            aria-label="Instagram Profile"
-          >
-            <Instagram className="w-4 h-4" />
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-red-500 transition-colors"
-            aria-label="LinkedIn Profile"
-          >
-            <Linkedin className="w-4 h-4" />
-          </a>
         </div>
 
         {/* Mobile menu triggers */}
@@ -158,9 +125,8 @@ export default function Navbar() {
             <button
               key={item.id}
               onClick={() => handleNavClick(item.id)}
-              className={`text-left py-2 hover:text-white transition-all ${
-                activeSection === item.id ? 'text-white pl-2 border-l border-red-500' : 'text-neutral-400'
-              }`}
+              className={`text-left py-2 hover:text-white transition-all ${activeSection === item.id ? 'text-white pl-2 border-l border-red-500' : 'text-neutral-400'
+                }`}
               id={`mobile-nav-item-${item.id}`}
             >
               {item.label}

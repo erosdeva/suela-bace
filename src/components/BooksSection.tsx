@@ -11,12 +11,12 @@ export default function BooksSection({ onOpenBook }: BooksSectionProps) {
   return (
     <section className="py-24 px-6 md:px-12 bg-black border-t border-b border-neutral-900" id="books">
       <div className="max-w-6xl mx-auto space-y-16">
-        
+
         {/* Section header */}
         <div className="text-center space-y-3">
           <span className="text-xs tracking-[0.3em] font-mono uppercase text-red-500 font-bold">The published catalog</span>
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-white tracking-tight">
-            The Written Masterpieces
+            The Written Works
           </h2>
           <div className="w-16 h-[2px] bg-red-600 mx-auto mt-4" />
           <p className="text-neutral-400 max-w-xl mx-auto font-light text-sm md:text-base leading-relaxed">

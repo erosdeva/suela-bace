@@ -3,10 +3,6 @@ import Navbar from './components/Navbar';
 import HomeHero from './components/HomeHero';
 import AboutSection from './components/AboutSection';
 import BooksSection from './components/BooksSection';
-import ReviewSection from './components/ReviewSection';
-import EventsSection from './components/EventsSection';
-import BlogSection from './components/BlogSection';
-import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import BookDetailsModal from './components/BookDetailsModal';
 import { Book } from './types';
@@ -55,17 +51,6 @@ export default function App() {
         {/* Catalog Showcase comparison list */}
         <BooksSection onOpenBook={handleOpenBook} />
 
-        {/* Verified criticisms & interactive star listings */}
-        <ReviewSection />
-
-        {/* Interactive RSVP Calendar */}
-        <EventsSection />
-
-        {/* Essays & Notes drawer */}
-        <BlogSection />
-
-        {/* Correspondence contact submission box */}
-        <ContactSection />
       </main>
 
       {/* Structured Footer representing the 4 Core Pillars */}

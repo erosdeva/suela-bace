@@ -21,13 +21,13 @@ export default function HomeHero({ onOpenBook, onScrollToSection }: HomeHeroProp
 
       {/* Main Grid: Adapts precisely from web_page_spread.png */}
       <div className="relative w-full max-w-7xl mx-auto px-6 md:px-12 z-10 grid grid-cols-1 xl:grid-cols-12 gap-8 items-center">
-        
+
         {/* Left Aspect: Author Image & Fast Info (Col Span: 4) */}
         <div className="xl:col-span-4 flex flex-col items-center xl:items-start text-center xl:text-left space-y-6">
           <div className="relative group">
             {/* Red Light Smoke Glow behind Author */}
             <div className="absolute -inset-2 bg-gradient-to-tr from-red-800 to-red-900/40 rounded-2xl blur-lg opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
-            
+
             <div className="relative w-full max-w-[280px] sm:max-w-[320px] xl:max-w-full aspect-[3/4] overflow-hidden rounded-2xl border border-neutral-800/80 bg-neutral-900/40 shadow-2xl">
               <img
                 src={BIOGRAPHY.portraitImage}
@@ -44,12 +44,12 @@ export default function HomeHero({ onOpenBook, onScrollToSection }: HomeHeroProp
             <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-red-950/40 border border-red-900/50 rounded-full text-[10px] font-mono tracking-widest uppercase text-red-400">
               <Sparkles className="w-3 h-3 text-red-500" /> Albanian Storyteller
             </div>
-            
+
             <h1 className="text-3xl font-serif font-bold text-white tracking-tight leading-snug">
               Stories that Inspire.<br />
               <span className="text-red-500 italic font-serif">Lessons</span> that Last.
             </h1>
-            
+
             <p className="text-sm text-neutral-400 font-light leading-relaxed">
               {BIOGRAPHY.shortBio}
             </p>
@@ -66,9 +66,9 @@ export default function HomeHero({ onOpenBook, onScrollToSection }: HomeHeroProp
         </div>
 
         {/* Center Aspect: Book covers focus & buy triggers (Col Span: 5) */}
-        <div className="xl:col-span-5 flex flex-col items-center space-y-8 py-8 px-2">
+        <div className="xl:col-span-5 flex flex-col items-center space-y-8 py-8 px-0.5">
           <span className="text-xs tracking-[0.4em] font-mono uppercase text-red-500/80 font-semibold">New Releases</span>
-          
+
           <div className="grid grid-cols-2 gap-4 md:gap-6 w-full max-w-md xl:max-w-none">
             {/* Book Card 1: The Face of Love */}
             <motion.div
@@ -92,7 +92,7 @@ export default function HomeHero({ onOpenBook, onScrollToSection }: HomeHeroProp
                   </span>
                 </div>
               </div>
-              
+
               <div className="text-center space-y-2">
                 <h3 className="text-sm font-serif font-bold text-white uppercase tracking-wide">
                   {faceOfLoveBook.title}
@@ -154,13 +154,6 @@ export default function HomeHero({ onOpenBook, onScrollToSection }: HomeHeroProp
                 <div className="flex flex-col gap-2 pt-1 font-mono text-[9px] tracking-widest uppercase">
                   <button
                     onClick={() => onOpenBook(stormsOfLifeBook)}
-                    className="py-1.5 px-3 bg-red-800 hover:bg-red-700 text-white rounded transition-colors shadow-sm"
-                    id="hero-storms-purchase-btn"
-                  >
-                    Preorder
-                  </button>
-                  <button
-                    onClick={() => onOpenBook(stormsOfLifeBook)}
                     className="py-1 px-3 border border-neutral-800 hover:border-neutral-700 hover:text-white text-neutral-400 rounded transition-colors"
                     id="hero-storms-learn-btn"
                   >
@@ -178,7 +171,7 @@ export default function HomeHero({ onOpenBook, onScrollToSection }: HomeHeroProp
           <div className="p-6 bg-neutral-950/40 rounded-xl border border-neutral-900 relative">
             <Quote className="w-5 h-5 text-red-500 absolute -top-2.5 left-6 bg-black px-1" />
             <p className="text-neutral-300 font-serif italic text-sm md:text-base leading-relaxed text-center xl:text-left">
-              “Mëso të vlerësosh atë që ke përpara se koha do të mësojë të vlerësosh atë që kishe!”
+              “Today's day is history, tomorrow's day is a mystery.”
             </p>
             <span className="text-[9px] font-mono tracking-widest text-red-500 uppercase mt-4 block text-center xl:text-right font-semibold">
               — ALBANIAN PROVERB —
