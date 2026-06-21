@@ -1,0 +1,6 @@
+{
+  "name": "Suela Baçe - Author Website",
+  "description": "An elegant promotional website for Albanian author Suela Baçe, featuring her novels 'The Face of Love' and 'Storms of Life' in a dramatic black, red, and white design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
