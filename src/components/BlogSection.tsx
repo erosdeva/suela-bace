@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Calendar, Clock, ArrowRight, User2, AlignLeft, ArrowLeft } from 'lucide-react';
-import { BLOG_POSTS, AUTHOR_NAME } from '../data';
+import { BLOG_POSTS, AUTHOR_NAME, BIOGRAPHY } from '../data';
 import { BlogPost } from '../types';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -130,7 +130,7 @@ export default function BlogSection() {
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full overflow-hidden border border-neutral-800">
                     <img
-                      src="/src/assets/images/suela_bace_author.jpg"
+                      src={BIOGRAPHY.portraitImage}
                       alt={AUTHOR_NAME}
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover"

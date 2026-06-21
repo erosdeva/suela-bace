@@ -1,4 +1,7 @@
 import { Book, Review, EventItem, BlogPost } from './types';
+import theFaceOfLoveCover from './assets/images/the_face_of_love_cover.png';
+import stormsOfLifeCover from './assets/images/storms_of_life_cover.png';
+import suelaBaceAuthor from './assets/images/suela_bace_author.jpg';
 
 export const AUTHOR_NAME = "Suela Baçe";
 export const AUTHOR_TAGLINE = "STORIES THAT REVEAL. LESSONS THAT LAST.";
@@ -9,7 +12,7 @@ export const BOOKS: Book[] = [
     title: "The Face Of Love",
     subtitle: "A gripping mystery fiction debut of sisterhood, secrets, and the masks we wear to survive.",
     slug: "the-face-of-love",
-    coverImage: "/src/assets/images/the_face_of_love_cover.png",
+    coverImage: theFaceOfLoveCover,
     description: "A gripping mystery of sisterhood, secrets, and the masks we wear to survive in a rapidly changing world.",
     longDescription: `Anjesa Rexha's mysterious disappearance amid late-1990s Albania's chaos of financial pyramids and human trafficking shattered her family and her sister Besa. 
 
@@ -26,9 +29,9 @@ She opened it with trembling fingers. Inside lay a single, dark red masquerade m
 
 "Where are you, Anje?" she whispered into the empty room, as the distant shouts of the city shook the windowpanes.`,
     purchaseUrl: "https://itascabooks.com/products/the-face-of-love-1",
-    pages: 312,
-    publishDate: "November 2023",
-    isbn: "978-1-950453-84-1",
+    pages: 267,
+    publishDate: "March 2026",
+    isbn: "978-1-948192-37-8",
     themes: ["Sisterhood", "Albanian Civil Crisis", "Trauma & Recovery", "Deception & Truth", "Immigration"]
   },
   {
@@ -36,7 +39,7 @@ She opened it with trembling fingers. Inside lay a single, dark red masquerade m
     title: "Storms of Life",
     subtitle: "A powerful story of pain, resilience, and the wisdom found through life's storms.",
     slug: "storms-of-life",
-    coverImage: "/src/assets/images/storms_of_life_cover.png",
+    coverImage: stormsOfLifeCover,
     description: "A powerful story of pain, resilience, and the wisdom found through life's inevitable tempests.",
     longDescription: `Inspired by the emotional depth of traditional Albanian wisdom, "Storms of Life" explores the tumultuous journey of healing from profound loss and reclaiming one's inner voice. 
     
@@ -50,9 +53,9 @@ They say the rain in the northern highlands cleanses the soil but leaves the hea
 "Today's day is history, tomorrow's day is a mystery," my grandmother used to whisper when the winter gales shook the rafters of our stone kullë. Learn to appreciate what you have in front of you as time will teach you how to appreciate what you had. 
 
 As the wind howled across the rocky crags, I finally understood her voice. The storm was not a punishment. It was a shedding of old skins, a cold reminder that the roots which grow in rocky ground must dig deeper to survive. I tightened my coat, took a breath of the crisp, electrified air, and stepped forward into the downpour.`,
-    pages: 284,
-    publishDate: "May 2025",
-    isbn: "978-1-950453-99-5",
+    pages: 111,
+    publishDate: "January 2020",
+    isbn: "978-0-578-74759-0",
     themes: ["Resilience", "Highland Traditions", "Generational Wisdom", "Healing", "Nature Symbolism"]
   }
 ];
@@ -64,5 +67,5 @@ export const BIOGRAPHY = {
 Her literary debut, "The Face of Love," captures the dramatic realities of late-1990s Albania, blending dark mystery, sensuality, and historical tragedy with high-stakes emotional depth. Suela's work is characterized by its unflinching exploration of trauma, the complex bonds of sisterhood, and the delicate facades we construct to protect ourselves and those we love.
 
 Now writing and speaking internationally, Suela seeks to bring little-seen Balkan histories and deeply human stories of survival, healing, and cultural voice into the global spotlight. She bridges the gap between traditional wisdom, such as the Albanian folk proverbs of her grandmother, and contemporary storytelling that speaks immediately to the heart.`,
-  portraitImage: "/src/assets/images/suela_bace_author.jpg"
+  portraitImage: suelaBaceAuthor
 };
