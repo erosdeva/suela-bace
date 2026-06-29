@@ -100,19 +100,43 @@ export default function HomeHero({ onOpenBook, onScrollToSection }: HomeHeroProp
                 <p className="text-[10px] text-neutral-500 font-serif leading-snug px-1 max-w-[170px] h-[32px] overflow-hidden text-ellipsis line-clamp-2">
                   A gripping mystery of sisterhood, secrets, and survival.
                 </p>
-                <div className="flex flex-col gap-2 pt-1 font-mono text-[9px] tracking-widest uppercase">
-                  <a
-                    href={faceOfLoveBook.purchaseUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="py-1.5 px-3 bg-red-800 hover:bg-red-700 text-white rounded text-center block transition-colors shadow-sm"
-                    id="hero-face-purchase-btn"
-                  >
-                    Buy Now
-                  </a>
+                <div className="flex flex-col gap-1.5 pt-1 font-mono text-[9px] tracking-widest uppercase">
+                  {faceOfLoveBook.purchaseUrl && (
+                    <a
+                      href={faceOfLoveBook.purchaseUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="py-1.5 px-3 bg-red-800 hover:bg-red-700 text-white rounded text-center block transition-colors shadow-sm font-semibold"
+                      id="hero-face-purchase-btn"
+                    >
+                      Buy on Itasca
+                    </a>
+                  )}
+                  {faceOfLoveBook.amazonUrl && (
+                    <a
+                      href={faceOfLoveBook.amazonUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="py-1.5 px-3 bg-[#e47911] hover:bg-[#f08b24] text-white rounded text-center block transition-colors shadow-sm font-semibold"
+                      id="hero-face-purchase-amazon-btn"
+                    >
+                      Buy on Amazon
+                    </a>
+                  )}
+                  {faceOfLoveBook.barnesNobleUrl && (
+                    <a
+                      href={faceOfLoveBook.barnesNobleUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="py-1.5 px-3 bg-[#0F5B46] hover:bg-[#137157] text-white rounded text-center block transition-colors shadow-sm font-semibold"
+                      id="hero-face-purchase-bn-btn"
+                    >
+                      Buy on B&N
+                    </a>
+                  )}
                   <button
                     onClick={() => onOpenBook(faceOfLoveBook)}
-                    className="py-1 px-3 border border-neutral-300 hover:border-neutral-400 hover:text-neutral-900 text-neutral-600 rounded transition-colors"
+                    className="py-1.5 px-3 border border-neutral-300 hover:border-neutral-400 hover:text-neutral-900 text-neutral-600 rounded transition-colors mt-0.5 font-semibold"
                     id="hero-face-learn-btn"
                   >
                     Learn More

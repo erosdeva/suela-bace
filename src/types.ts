@@ -8,6 +8,8 @@ export interface Book {
   longDescription: string;
   excerpt: string;
   purchaseUrl?: string;
+  amazonUrl?: string;
+  barnesNobleUrl?: string;
   pages?: number;
   publishDate?: string;
   isbn?: string;

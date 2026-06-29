@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Facebook, Instagram, Linkedin, Bookmark } from 'lucide-react';
 import { AUTHOR_NAME, AUTHOR_TAGLINE } from '../data';
+import logoV2 from '../assets/images/logo_v2.jpg';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -72,8 +73,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Author Brand Name & Emblem */}
         <div className="flex items-center gap-3 cursor-pointer" onClick={() => handleNavClick('home')} id="navbar-brand">
-          <div className="w-8 h-8 rounded-full bg-red-50 border border-red-300 flex items-center justify-center text-red-600 font-serif font-bold text-sm shadow-sm">
-            ❦
+          <div className="w-8 h-8 rounded-full overflow-hidden border border-neutral-200 flex items-center justify-center bg-white shadow-sm">
+            <img src={logoV2} alt="Logo" className="w-full h-full object-cover" />
           </div>
           <div>
             <span className="font-serif text-lg md:text-xl font-bold tracking-widest text-neutral-900 block uppercase">

@@ -29,6 +29,8 @@ She opened it with trembling fingers. Inside lay a single, dark red masquerade m
 
 "Where are you, Anje?" she whispered into the empty room, as the distant shouts of the city shook the windowpanes.`,
     purchaseUrl: "https://itascabooks.com/products/the-face-of-love-1",
+    amazonUrl: "https://www.amazon.com/Face-Love-Suela-Bace/dp/1948192373/",
+    barnesNobleUrl: "https://www.barnesandnoble.com/w/the-face-of-love-suela-bace/1149914673",
     pages: 267,
     publishDate: "March 2026",
     isbn: "978-1-948192-37-8",
@@ -45,7 +47,10 @@ She opened it with trembling fingers. Inside lay a single, dark red masquerade m
     
 Setting its canvas against both the rugged, timeless highlands of Albania and the modern emotional struggles of survival, the novel delves deep into what it means to hold onto oneself when everything else is torn away by the gales of fate. 
 
-Centering around a woman who stands starkly against her struggles, much like a solitary tree weathering a mountain storm, this narrative captures the breathtaking beauty of human endurance. It is a profound, beautifully written exploration that asks us to reflect upon our past, find strength in our scars, and appreciate the present.`,
+Centering around a woman who stands starkly against her struggles, much like a solitary tree weathering a mountain storm, this narrative captures the breathtaking beauty of human endurance. It is a profound, beautifully written exploration that asks us to reflect upon our past, find strength in our scars, and appreciate the present.
+
+To purchase or for further inquiries, please reach out to the author at suelabotime@gmail.com`,
+
     excerpt: `Prelude: The Flash of Light
 
 They say the rain in the northern highlands cleanses the soil but leaves the heart wet. I stood on the craggy ledge, watching the sky split in two. The lightning did not scare me anymore. When you have lived through the collapse of your entire world, a spark in the dark is a welcome sight. It shows you the path, if only for a fraction of a second.

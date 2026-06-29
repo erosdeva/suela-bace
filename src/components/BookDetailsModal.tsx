@@ -69,18 +69,42 @@ export default function BookDetailsModal({ book, onClose }: BookDetailsModalProp
 
             {/* Links */}
             <div className="space-y-2 pt-2">
-              {book.purchaseUrl ? (
+              {book.purchaseUrl && (
                 <a
                   href={book.purchaseUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-gradient-to-r from-red-700 to-red-800 hover:from-red-600 hover:to-red-700 text-white font-medium rounded-lg text-sm tracking-wider uppercase transition-colors shadow-lg shadow-red-900/20 font-sans"
+                  className="flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-gradient-to-r from-red-700 to-red-800 hover:from-red-600 hover:to-red-700 text-white font-medium rounded-lg text-xs tracking-wider uppercase transition-colors shadow-lg shadow-red-900/20 font-sans"
                   id={`purchase-btn-${book.id}`}
                 >
-                  <span>Purchase Book</span>
-                  <ExternalLink className="w-4 h-4" />
+                  <span>Buy on Itasca Books</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
                 </a>
-              ) : null}
+              )}
+              {book.amazonUrl && (
+                <a
+                  href={book.amazonUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-gradient-to-r from-[#e47911] to-[#f08b24] hover:from-[#d36e0f] hover:to-[#e47911] text-white font-medium rounded-lg text-xs tracking-wider uppercase transition-colors shadow-lg shadow-amber-900/20 font-sans"
+                  id={`purchase-amazon-btn-${book.id}`}
+                >
+                  <span>Buy on Amazon</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              )}
+              {book.barnesNobleUrl && (
+                <a
+                  href={book.barnesNobleUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-gradient-to-r from-[#0F5B46] to-[#137157] hover:from-[#0b4434] hover:to-[#0F5B46] text-white font-medium rounded-lg text-xs tracking-wider uppercase transition-colors shadow-lg shadow-emerald-900/20 font-sans"
+                  id={`purchase-bn-btn-${book.id}`}
+                >
+                  <span>Buy on Barnes & Noble</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              )}
             </div>
           </div>
         </div>
