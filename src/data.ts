@@ -66,7 +66,7 @@ As the wind howled across the rocky crags, I finally understood her voice. The s
 ];
 
 export const BIOGRAPHY = {
-  shortBio: "Suela Baçe is an Albanian author whose stories explore love, loss, resilience, and the human spirit. Her novels shine a light on the strength it takes to survive—and the courage it takes to love again.",
+  shortBio: "Suela Baçe is an Albanian-American author whose stories explore love, loss, resilience, and the human spirit. Her novels shine a light on the strength it takes to survive—and the courage it takes to love again.",
   longBio: `Suela Baçe is a powerful, evocative voice in contemporary fiction, drawing deeply from her Albanian heritage and her unique perspective on migration, identity, and the complexity of human relationships. Born and raised in Albania during periods of profound political and social transformation, she witnessed firsthand the resilience of individuals and families negotiating historical crises.
 
 Her literary debut, "The Face of Love," captures the dramatic realities of late-1990s Albania, blending dark mystery, sensuality, and historical tragedy with high-stakes emotional depth. Suela's work is characterized by its unflinching exploration of trauma, the complex bonds of sisterhood, and the delicate facades we construct to protect ourselves and those we love.
