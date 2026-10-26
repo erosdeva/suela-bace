@@ -18,7 +18,11 @@ export const BOOKS: Book[] = [
 
 One sister eventually surfaces in the United States, the other remains in Albania. Both are shaped by the contradictory power and trauma of their relationships with men. Their paths converge when Jim, an American soldier battling his own demons, enters the life of one sister.
 
-"The Face of Love" is a gripping mystery fiction debut by native Albanian Suela Baçe, spanning countries, timelines, and blending dark humor, sensuality, intense emotions, and heartbreaks. The novel introduces a powerful new voice, illuminating a little-seen history while telling a deeply human story of guilt, resilience, love, and the enduring pull of home.`,
+"The Face of Love" is a gripping mystery fiction debut by native Albanian Suela Baçe, spanning countries, timelines, and blending dark humor, sensuality, intense emotions, and heartbreaks. The novel introduces a powerful new voice, illuminating a little-seen history while telling a deeply human story of guilt, resilience, love, and the enduring pull of home.
+
+You can also find and explore the novel on alternative platforms:
+• <a href="https://www.goodreads.com/search?q=the+face+of+love+by+suela+bace" target="_blank" rel="noopener noreferrer">Goodreads</a>
+• <a href="https://bookshop.org/beta-search?keywords=the+face+of+love+by+suela+bace" target="_blank" rel="noopener noreferrer">Bookshop.org</a>`,
     excerpt: `Chapter 1: The Echo of Pyramids
 
 Besa watched the television screen as the anchor spoke of another financial bank collapsing. Tirana was a city of whispers, but today, those whispers turned into a roar. The crowds gathered on the streets, desperate, furious, clinging to receipt stubs that promised fortunes that had vanished overnight. 

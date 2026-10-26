@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { X, ExternalLink, BookOpen, Calendar, Hash, FileText } from 'lucide-react';
 import { Book } from '../types';
@@ -5,6 +6,74 @@ import { Book } from '../types';
 interface BookDetailsModalProps {
   book: Book | null;
   onClose: () => void;
+}
+
+function renderFormattedSynopsis(text: string) {
+  const pattern = /(<a\s+(?:[^>]*?\s+)?href=["']([^"']+)["'][^>]*>(.*?)<\/a>|\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|(https?:\/\/[^\s<]+))/g;
+
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = pattern.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index));
+    }
+
+    if (match[1]?.startsWith('<a')) {
+      const href = match[2];
+      const label = match[3];
+      parts.push(
+        <a
+          key={`link-${match.index}`}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-red-700 hover:text-red-900 underline underline-offset-2 font-medium transition-colors inline-flex items-center gap-1"
+        >
+          {label}
+          <ExternalLink className="w-3 h-3 inline flex-shrink-0" />
+        </a>
+      );
+    } else if (match[4]) {
+      const label = match[4];
+      const href = match[5];
+      parts.push(
+        <a
+          key={`link-${match.index}`}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-red-700 hover:text-red-900 underline underline-offset-2 font-medium transition-colors inline-flex items-center gap-1"
+        >
+          {label}
+          <ExternalLink className="w-3 h-3 inline flex-shrink-0" />
+        </a>
+      );
+    } else if (match[6]) {
+      const url = match[6];
+      parts.push(
+        <a
+          key={`link-${match.index}`}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-red-700 hover:text-red-900 underline underline-offset-2 font-sans font-medium break-all transition-colors inline-flex items-center gap-1"
+        >
+          {url}
+          <ExternalLink className="w-3 h-3 inline flex-shrink-0" />
+        </a>
+      );
+    }
+
+    lastIndex = match.index + match[0].length;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
+  }
+
+  return parts;
 }
 
 export default function BookDetailsModal({ book, onClose }: BookDetailsModalProps) {
@@ -148,7 +217,7 @@ export default function BookDetailsModal({ book, onClose }: BookDetailsModalProp
             <div className="prose prose-sm max-w-none text-neutral-700 space-y-4">
               <h4 className="text-xs uppercase tracking-widest font-mono text-neutral-500">Synopsis</h4>
               <p className="leading-relaxed whitespace-pre-line text-sm md:text-base font-serif font-light text-neutral-700">
-                {book.longDescription}
+                {renderFormattedSynopsis(book.longDescription)}
               </p>
             </div>
           </div>
